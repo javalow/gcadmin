@@ -1,0 +1,65 @@
+<top-bar [sidenav]="sidenav"></top-bar>
+<mat-sidenav-container>
+	<mat-sidenav #sidenav [mode]="mode" [opened]="opened" class="app-sidenav">
+		<mat-nav-list>
+			<a mat-list-item [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+				<mat-icon mat-list-icon>home</mat-icon>
+				<span mat-line>Home</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftactivityfeed']" routerLinkActive="active">
+				<mat-icon mat-list-icon>subject</mat-icon>
+				<span mat-line>Activity Feed</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftnews']" routerLinkActive="active">
+				<mat-icon mat-list-icon>receipt</mat-icon>
+				<span mat-line>News</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftcatalogitems']" routerLinkActive="active">
+				<mat-icon mat-list-icon>assignment</mat-icon>
+				<span mat-line>Catalog Items</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftproducts']" routerLinkActive="active">
+				<mat-icon mat-list-icon>shopping_cart</mat-icon>
+				<span mat-line>Products</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftmenuitems']" routerLinkActive="active">
+				<mat-icon mat-list-icon>menu</mat-icon>
+				<span mat-line>Food Menu</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftuserprofiles']" routerLinkActive="active">
+				<mat-icon mat-list-icon>supervisor_account</mat-icon>
+				<span mat-line>User Profiles</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftproperties']" routerLinkActive="active">
+				<mat-icon mat-list-icon>import_contacts</mat-icon>
+				<span mat-line>Real Estate</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftphotogalleries']" routerLinkActive="active">
+				<mat-icon mat-list-icon>crop_original</mat-icon>
+				<span mat-line>Galleries</span>
+			</a>
+
+			<a mat-list-item [routerLink]=" ['./manager/ftchatrooms']" routerLinkActive="active">
+				<mat-icon mat-list-icon>question_answer</mat-icon>
+				<span mat-line>Chat</span>
+			</a>
+		</mat-nav-list>
+
+	</mat-sidenav>
+
+	<div class="app-content">
+		<router-outlet></router-outlet>
+	</div>
+</mat-sidenav-container>
+
+<!--<span class="app-action">-->
+<!--<button mat-fab><mat-icon>add circle</mat-icon></button>-->
+<!--</span>-->

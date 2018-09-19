@@ -1,0 +1,47 @@
+<div class="sg-login-screen">
+	<div class="app-branding">
+		<h1>{{appName}}</h1>
+		<!-- <h2>{{appSubtitle}}</h2> -->
+		<p>{{appSlogan}}</p>
+	</div>
+
+
+	<div class="sg-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+		<mat-card>
+
+			<mat-card-title>Sign in</mat-card-title>
+
+			<div fxLayout="column">
+				<div layout="row">
+					<p class="mat-body-2"> Sign in with your email</p>
+				</div>
+
+				<form [formGroup]="loginForm" #f="ngForm" (ngSubmit)="signInWithEmail()" fxLayout="column" fxFlexFill fxLayoutGap="10px">
+
+					<mat-input-container>
+						<input matInput formControlName="email" type="email" placeholder="Email">
+					</mat-input-container>
+
+					<mat-input-container>
+						<input matInput formControlName="password" type="password" placeholder="Password">
+					</mat-input-container>
+
+					<button mat-raised-button color="primary" type="submit" aria-label="login">Sign In</button>
+				</form>
+
+				<div [hidden]="error == ''">
+					<p class="wfw-warn">{{ error }}</p>
+				</div>
+
+				<mat-divider></mat-divider>
+
+				<div fxLayout="column" fxLayoutAlign="center" nxLayoutGap="10px" style="margin-top:8px;">
+					<button mat-button color="primary" (click)="signInWithGoogle()">Sign in with Google</button>
+					<a *ngIf="false" mat-button [routerLink]="['/sign-up']">Create an account</a>
+					<a mat-button [routerLink]="['/forgot-password']">Forgot password?</a>
+				</div>
+			</div>
+		</mat-card>
+
+	</div>
+</div>

@@ -1,0 +1,22 @@
+@import "../vars";
+
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	mat-card {
+		height: 200px;
+		width: 200px;
+	}
+
+	mat-card-actions {
+		bottom: 25px;
+		position: absolute;
+	}
+}
+
+.search {
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 20px;
+}

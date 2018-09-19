@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~bootstrap/scss/bootstrap';
+
+@include mat-core();
+
+$primary: mat-palette($mat-blue);
+$accent: mat-palette($mat-green);
+$warn: mat-palette($mat-red);
+$background: mat-palette($mat-grey);
+
+$theme: mat-light-theme($primary, $accent);
+
+$padding: 20px;
+
+@include angular-material-theme($theme);
