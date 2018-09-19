@@ -42,6 +42,7 @@ export class ItemsListComponent implements OnInit {
 			if (itemName) {
 				let item = {
 					title: itemName
+
 				};
 				this.data.createItem(this.itemsType, item);
 			}

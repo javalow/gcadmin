@@ -652,24 +652,24 @@ export const itemsFormConfig = () => ({
 				validation: Validators.compose([Validators.required])
 			}
 		},
-		{
-			type: 'input',
-			key: 'linkedIn',
-			templateOptions: {
-				label: 'LinkedIn',
-				description: 'Enter your LinkedIn page',
-				placeholder: 'http://www.linkedin.com/in/williamhgates',
-				required: false
-			},
-			validators: {
-				validation: ValidationService.urlValidator
-			},
-			validation: {
-				messages: {
-					invalidUrl: ValidationService.getValidatorErrorMessage('invalidUrl')
-				}
-			}
-		},
+		// {
+		// 	type: 'input',
+		// 	key: 'linkedIn',
+		// 	templateOptions: {
+		// 		label: 'LinkedIn',
+		// 		description: 'Enter your LinkedIn page',
+		// 		placeholder: 'http://www.linkedin.com/in/williamhgates',
+		// 		required: false
+		// 	},
+		// 	validators: {
+		// 		validation: ValidationService.urlValidator
+		// 	},
+		// 	validation: {
+		// 		messages: {
+		// 			invalidUrl: ValidationService.getValidatorErrorMessage('invalidUrl')
+		// 		}
+		// 	}
+		// },
 		{
 			type: 'input',
 			key: 'webpage',
@@ -749,7 +749,25 @@ export const itemsFormConfig = () => ({
 			type: 'date-time-picker',
 			templateOptions: {
 				label: 'Activity Date',
-				showTime: true
+				showTime: true,
+				required: true
+			}
+		},
+		{
+			className: 'col-12',
+			type: 'input',
+			key: 'email',
+			templateOptions: {
+				label: 'Client Email',
+				required: true
+			},
+			validators: {
+				validation: ValidationService.emailValidator
+			},
+			validation: {
+				messages: {
+					invalidEmailAddress: ValidationService.getValidatorErrorMessage('invalidEmailAddress')
+				}
 			}
 		},
 		{

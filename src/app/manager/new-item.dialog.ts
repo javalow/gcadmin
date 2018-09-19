@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class NewItemDialog {
 	itemName: string = '';
+	itemClient: string = '';
 
 	constructor(private dialogRef: MatDialogRef<NewItemDialog>) {}
 
