@@ -2,6 +2,10 @@ import { Validators } from '@angular/forms';
 import { ValidationService } from '../common/formly/validation.service';
 
 export const itemsFormConfig = () => ({
+
+
+// NEWS
+
 	ftnews: [
 		{
 			type: 'input',
@@ -54,6 +58,9 @@ export const itemsFormConfig = () => ({
 			}
 		}
 	],
+
+	// Products
+
 	ftproducts: [
 		{
 			type: 'input',
@@ -134,6 +141,9 @@ export const itemsFormConfig = () => ({
 			}
 		}
 	],
+
+	// Properties - Real Estate?
+
 	ftproperties: [
 		{
 			type: 'input',
@@ -382,6 +392,9 @@ export const itemsFormConfig = () => ({
 			]
 		}
 	],
+
+	// Food Menu
+
 	ftmenuitems: [
 		{
 			type: 'input',
@@ -566,6 +579,10 @@ export const itemsFormConfig = () => ({
 			}
 		}
 	],
+
+
+	// User Profiles
+
 	ftuserprofiles: [
 		{
 			type: 'input',
@@ -689,6 +706,10 @@ export const itemsFormConfig = () => ({
 			}
 		}
 	],
+
+	// Catalog Items
+
+
 	ftcatalogitems: [
 		{
 			type: 'input',
@@ -801,6 +822,9 @@ export const itemsFormConfig = () => ({
 			}
 		}
 	],
+
+	// Activity Feed
+
 	ftactivityfeed: [
 		{
 			type: 'input',
@@ -895,6 +919,10 @@ export const itemsFormConfig = () => ({
 			}
 		}
 	],
+
+	
+	// Chat Rooms
+
 	ftchatrooms: [
 		{
 			type: 'input',
