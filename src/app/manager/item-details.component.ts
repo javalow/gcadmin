@@ -66,7 +66,7 @@ export class ItemDetailsComponent implements AfterViewInit {
 					this.form.markAsPristine();
 
 					this.snackBar.open('The changes has been saved', 'Ok', {
-						duration: 3000
+						duration: 2000
 					});
 
 					if (!this.itemId && item.$key) {
@@ -77,6 +77,7 @@ export class ItemDetailsComponent implements AfterViewInit {
 					console.log(error);
 				}
 			);
+			this.location.back();
 	}
 
 	cancel() {

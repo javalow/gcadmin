@@ -7,6 +7,7 @@ import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NewItemDialog } from './new-item.dialog';
+import { EditItemDialog } from './edit-item.dialog';
 import { ItemDetailsComponent } from './item-details.component';
 import { AgmCoreModule } from '@agm/core';
 import { FormlyFormEnricher } from './formly-form-enricher';
@@ -33,9 +34,13 @@ export const managerRoutes: Routes = [
 	declarations: [
 		ItemsListComponent,
 		ItemDetailsComponent,
-		NewItemDialog
+		NewItemDialog,
+		EditItemDialog
 	],
-	entryComponents: [NewItemDialog],
+	entryComponents: [
+		NewItemDialog,
+		EditItemDialog
+	],
 	providers: [FormlyFormEnricher],
 })
 export class ManagerModule {

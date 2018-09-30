@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ConfirmDialog } from '../common/dialogs/confirm.dialog';
 import { NewItemDialog } from './new-item.dialog';
+import { EditItemDialog } from './edit-item.dialog';
 
 @Component({
 	selector: 'items-list',
@@ -48,6 +49,20 @@ export class ItemsListComponent implements OnInit {
 			}
 		});
 	}
+	updateItem(item) {
+		var title;
+		let dialogRef = this.dialog.open(EditItemDialog, {
+			width: '300px'
+		});
+
+		dialogRef.afterClosed().subscribe(itemName => {
+		if(!null) {
+			title = itemName
+		};
+	});
+				this.data.updateItem(this.itemsType, item, title);
+			}
+
 
 	deleteItem(item) {
 		let data = {

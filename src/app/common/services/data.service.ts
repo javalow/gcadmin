@@ -38,6 +38,11 @@ export class DataService {
 		return this.afDB.object(`${itemType}/${key}`).update(update);
 	}
 
+	updateItem(itemType: string, item: any, title: string): Promise<void> {
+		let key = item.$key;
+		return this.afDB.object(`${itemType}/${item.key}`).update({title: title});
+	}
+
 	private patchEntity(item: any): any {
 		let update = JSON.parse(JSON.stringify(item));
 		delete update.$key;

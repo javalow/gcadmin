@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Edit Name</h1>
+<div mat-dialog-content>
+	<mat-input-container>
+		<input matInput placeholder="Name" [(ngModel)]="itemName">
+		<!-- <input matInput placeholder="Client" [(ngModel)]="itemClient"> -->
+	</mat-input-container>
+</div>
+
+<div mat-dialog-actions>
+	<button mat-button (click)="cancel()">CANCEL</button>
+	<button mat-raised-button (click)="update()" [disabled]="!itemName" color="primary">DONE</button>
+</div>
