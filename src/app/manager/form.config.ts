@@ -774,11 +774,15 @@ export const itemsFormConfig = () => ({
 		// 	}
 		// },
 		{
+			type: 'input',
 			key: 'startdate',
-			type: 'date-time-picker',
 			templateOptions: {
 				label: 'Start Date',
-				showTime: false
+				required: true,
+				description: 'enter month & year started service'
+			},
+			validators: {
+				validation: Validators.compose([Validators.required])
 			}
 		},
 		{
